@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seletores</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Seletores de CSS</h1>
+    <p>
+      Um seletor de CSS seleciona o(s) elemento(s) HTML que você deseja
+      estilizar.
+    </p>
+    <h2>Categorias</h2>
+
+    <h3>Seletores Simples</h3>
+    <p>Seleciona elementos com base no nome, id, classe...</p>
+    <h4>Seletor de Elementos</h4>
+    <p>Seleciona elementos HTML com base no nome.</p>
+    <h5>Exemplo</h5>
+    <code>
+      p {<br />
+      text-align: center; <br />
+      color: red; <br />
+      }
+    </code>
+    <h4>Seletor de Id</h4>
+    <p>
+      O seletor de id usa o atributo de um elemento em HTML para selecionar um
+      elemento específico. <br />
+      Para selecionar um Id, escreva um caractere hash (#) seguido do id do
+      elemento.
+    </p>
+    <h5>Exemplo</h5>
+    <code>
+      #para1 {<br />
+      text-align: center; <br />
+      color: red; <br />
+      }
+    </code>
+    <h4>Seletor de Classe</h4>
+    <p>
+      O Seletor de Classe seleciona elementos HTML com um atributo de classe
+      específico. <br />
+      Para selecionar elementos com uma classe específica, escreve um caractere
+      de ponto (.), seguido do nome da classe.
+    </p>
+    <h5>Exemplo</h5>
+    <code>
+      .center {<br />
+      text-align: center; <br />
+      color: red; <br />
+      }
+    </code>
+    <p>
+      Pode-se especificar que apenas elementos HTML específicos devem ser
+      afetados por uma classe.
+    </p>
+    <h5>Exemplo</h5>
+    <code>
+      p.center {<br />
+      text-align: center; <br />
+      color: red; <br />
+      }
+    </code>
+    <p>Os elementos HTML também podem se referir a mais de uma classe.</p>
+    <h5>Exemplo</h5>
+    <code
+      >&lt;p class="center large"&gt;This paragraph referes to two
+      classes&lt;/p&gt;</code
+    >
+    <h4>Seletor Universal</h4>
+    <p>O Seletor Universal (*) seleciona todos os elementos HTML da página.</p>
+    <h5>Exemplo</h5>
+    <code>
+      * {<br />
+      text-align: center; <br />
+      color: red; <br />
+      }
+    </code>
+    <h4>Seletor de Agrupamento</h4>
+    <p>
+      O Seletor de Agrupamento seleciona todos os elementos HTML com as mesmas
+      definições de estilo.
+    </p>
+    <code>
+      h1 {<br />
+      text-align: center; <br />
+      color: red; <br />
+      }
+    </code>
+    <h3>Seletores de Combinação</h3>
+    <p>
+      Um seletor CSS pode conter mais de um seletor simples. Entre os seletores
+      simples, pode-se incluir um combinador.
+    </p>
+    <p>Existem 4 combinadores diferentes em CSS:</p>
+    <ul>
+      <li>descendant selector</li>
+      <li>child selector (&gt;)</li>
+      <li>adjacent sibling selector (+)</li>
+      <li>general sibling selector (~)</li>
+    </ul>
+    <h4>Descendant Selector</h4>
+    <p>
+      Corresponde a todos os elementos que são descendentes de um elemento
+      especificado.
+    </p>
+    <h5>Exemplo</h5>
+    <p>
+      O exemplo a seguir seleciona todos os elementos &lt;p&gt; dentro dos
+      elementos &lt;div&gt;.
+    </p>
+    <p>Seleciona elementos com base em um determinado estado.</p>
+    <code>
+      div p { <br />
+      background-color: yellow; <br />
+      }
+    </code>
+    <h4>Child Selector</h4>
+    <p>
+      Seleciona todos os elementos que são filhos de um elemento especificado.
+    </p>
+    <h5>Exemplo</h5>
+    <p>
+      O exemplo a seguir seleciona todos os elementos &lt;p&gt; que são filhos
+      de um elemento &lt;div&gt;.
+    </p>
+    <code>
+      div &gt; p { <br />
+      background-color: yellow; <br />
+      }
+    </code>
+    <h4>Adjacent Sibling Selector</h4>
+    <p>
+      É usado para selecionar um elemento que está diretamente após outro
+      elemento específico.
+    </p>
+    <p>Devem ter o mesmo elemento "pai".</p>
+    <h5>Exemplo</h5>
+    <p>
+      O exemplo a seguir seleciona o primeiro elemento &lt;p&gt; que é colocado
+      imediatamente após os elementos &lt;div&gt;.
+    </p>
+    <code>
+      div + p { <br />
+      background-color: yellow; <br />
+      }
+    </code>
+    <h4>General Sibling Selector</h4>
+    <p>
+      Seleciona todos os elementos que são os próximos irmãos de um elemento
+      especificado.
+    </p>
+    <h5>Exemplo</h5>
+    <p>
+      O exemplo a seguir seleciona todos os elementos &lt;p&gt; que são os
+      próximos irmãos dos elementos &lt;div&gt;.
+    </p>
+    <code>
+      div ~ p { <br />
+      background-color: yellow; <br />
+      }
+    </code>
+
+    <h3>Seletores de Pseudoclasse</h3>
+    <p>É usado para definir um estado especial de um elemento.</p>
+    <p>Por exemplo, pode ser usado para:</p>
+    <ul>
+      <li>Estilizar um elemento quando um usuário passa o mouse sobre ele;</li>
+      <li>Estilizar links visitados e não visitados de forma diferente;</li>
+      <li>Estilizar um elemento quando ele recebe o foco.</li>
+    </ul>
+    <h4>Sintaxe</h4>
+    <code>
+      selector:pseudo-class { <br />
+      property: value; <br />
+      }
+    </code>
+    <h4>Pseudo-Classes Àncora</h4>
+    <h5>Exemplos</h5>
+    <code>
+      /* unvisited link */ <br />
+      a:link { <br />
+      color: #FF0000; <br />
+      }
+      <br />
+      <br />
+      /* visited link */ <br />
+      a:visited { <br />
+      color: #00FF00; <br />
+      }
+    </code>
+    <br />
+    <br />
+    <code>
+      /* mouse over link */ <br />
+      a:hover { <br />
+      color: #FF00FF; <br />
+      }
+    </code>
+    <br />
+    <br />
+    <code>
+      /* selected link */ <br />
+      a:active { <br />
+      color: #0000FF; <br />
+      }
+    </code>
+
+    <h3>Seletores de Pseudo-Elementos</h3>
+    <p>Seleciona e estiliza parte de um elemento.</p>
+
+    <h3>Seletores de Atributo</h3>
+    <p>Seleciona elementos com base em um atributo ou valor de atributo.</p>
+  </body>
+</html>
